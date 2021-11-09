@@ -1,13 +1,189 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #3f3f3f;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Expense item */
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+}
+
+.expense-item__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.expense-item h2 {
+    color: #3a3a3a;
+    font-size: 1rem;
+    flex: 1;
+    margin: 0 1rem;
+    color: white;
+}
+
+.expense-item__price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #40005d;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+@media (min-width: 580px) {
+    .expense-item__description {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    .expense-item__description h2 {
+        font-size: 1.25rem;
+    }
+    .expense-item__price {
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+
+/* Expense item */
+
+
+/* Expense Date */
+
+.expense-date {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ececec;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.expense-date__month {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.expense-date__day {
+    font-size: 2rem;
+}
+
+.expense-date__year {
+    font-size: 00.75rem;
+}
+
+
+/* Expense Date */
+
+.expenses {
+    background-color: #272129;
+}
+
+.expenses {
+    padding: 1rem;
+    background-color: rgb(31, 31, 31);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+
+/* Card */
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Card */
+
+
+/* New Expense */
+
+.New-Expense {
+    background-color: #a892ee;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-expense-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.new-expense-control label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 00.5rem;
+}
+
+.new-expense-control input {
+    padding: 1rem;
+    width: 20rem;
+    max-width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font: inherit;
+}
+
+.new-expense-actions {
+    text-align: right;
+}
+
+.new-expense-actions button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    font: inherit;
+}
+
+.new-expense-actions button:hover,
+.new-expense-actions button:active {
+    background-color: #510674;
+    border-color: #510674;
+}
+
+
+/* New Expense */
