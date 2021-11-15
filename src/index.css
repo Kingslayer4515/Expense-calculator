@@ -131,7 +131,34 @@ code {
 
 /* New Expense */
 
-.New-Expense {
+.new-expense__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.new-expense__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.new-expense__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.new-expense__actions {
+    text-align: right;
+}
+
+.new-expense {
     background-color: #a892ee;
     padding: 1rem;
     margin: 2rem auto;
@@ -142,48 +169,64 @@ code {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
-.new-expense-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-.new-expense-control label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 00.5rem;
-}
-
-.new-expense-control input {
-    padding: 1rem;
-    width: 20rem;
-    max-width: 100%;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.new-expense button {
     font: inherit;
-}
-
-.new-expense-actions {
-    text-align: right;
-}
-
-.new-expense-actions button {
     cursor: pointer;
     padding: 1rem 2rem;
     border: 1px solid #40005d;
     background-color: #40005d;
     color: white;
     border-radius: 12px;
-    font: inherit;
+    margin-right: 1rem;
 }
 
-.new-expense-actions button:hover,
-.new-expense-actions button:active {
+.new-expense button:hover,
+.new-expense button:active {
     background-color: #510674;
     border-color: #510674;
 }
 
+.new-expense button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.new-expense button.alternative:hover,
+.new-expense button.alternative:active {
+    background-color: #ddb3f8;
+}
+
 
 /* New Expense */
+
+
+/* Expense Filter */
+
+.expense-filter {
+    color: aliceblue;
+    padding: 0 1rem;
+}
+
+.expense-filter-control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.expense-filter label {
+    font-weight: bold;
+    margin-bottom: 00.5rem;
+}
+
+.expense-filter select {
+    font: inherit;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+
+/* Expense Filter */

@@ -3,10 +3,13 @@ import ExpenseDate from '../Expenses/ExpenseDate';
 import Card from '../UI/Card';
 
 
+
 function Expenseitem(props) {
     const [title, setTitle] = useState(props.title);
+    console.log('ExpenseItem evaluated by React');
     function clickHandler(){
         setTitle('Updated');
+        console.log(title);
 
     };
   
@@ -15,6 +18,7 @@ function Expenseitem(props) {
     
     return (
         <>
+        
         
             <Card className="expense-item">
                 <ExpenseDate date={props.date}></ExpenseDate>
